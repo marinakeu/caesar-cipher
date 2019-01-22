@@ -18,15 +18,21 @@
     </div>
 
     <div id="pagina-cifrar">
-
+      <input id="deslocamento-cifrar" type="text" placeholder="Digite a chave de deslocamento">
+      <input id="mensagem-cifrar" type="text" placeholder="Digite a mensagem a ser cifrada">
+      <input onclick="encode()" type="submit" value="Enviar">
     </div>
 
     <div id="pagina-decifrar">
-
+      <input id="deslocamento-decifrar" type="text" placeholder="Digite a chave de deslocamento">
+      <input id="mensagem-decifrar" type="text" placeholder="Digite a mensagem a ser decifrada">
+      <input onclick="decode()" type="submit" value="Enviar">
     </div>
 
     <div id="pagina-mensagem">
-
+      <h3>Cconfira sua mensagem <span id="tipo-mensagem"></span></h3>
+      <p id="mensagem-nova"></p>
+      <button onclick="cipherPage">Quero inserir uma nova mensagem</button>
     </div>
 
     <script src="cipher.js"></script>
