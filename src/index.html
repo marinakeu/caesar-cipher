@@ -13,24 +13,28 @@
     <div id="pagina-inicial">
       <h3>Olá!</h3>
       <p>Escolha uma opção:</p>
-      <button onclick="cipherPage">Quero escrever uma mensagem nova</button>
-      <button onclick="decipherPage">Quero decifrar uma mensagem</button>
+      <button onclick="showCipherPage()">Quero escrever uma mensagem nova</button>
+      <button onclick="showDecodePage()">Quero decifrar uma mensagem</button>
     </div>
 
     <div id="pagina-cifrar">
-      <input id="deslocamento-cifrar" type="text" placeholder="Digite a chave de deslocamento">
-      <input id="mensagem-cifrar" type="text" placeholder="Digite a mensagem a ser cifrada">
+      <p>Digite a chave de deslocamento:</p>
+      <input id="deslocamento-cifrar" type="text">
+      <p>Digite a mensagem a ser cifrada</p>
+      <input id="mensagem-cifrar" type="text">
       <input onclick="encode()" type="submit" value="Enviar">
     </div>
 
     <div id="pagina-decifrar">
-      <input id="deslocamento-decifrar" type="text" placeholder="Digite a chave de deslocamento">
-      <input id="mensagem-decifrar" type="text" placeholder="Digite a mensagem a ser decifrada">
+      <p>Digite a chave de deslocamento:</p>
+      <input id="deslocamento-decifrar" type="text">
+      <p>Digite a mensagem a ser decifrada</p>
+      <input id="mensagem-decifrar" type="text"> 
       <input onclick="decode()" type="submit" value="Enviar">
     </div>
 
     <div id="pagina-mensagem">
-      <h3>Cconfira sua mensagem <span id="tipo-mensagem"></span></h3>
+      <h3>Confira sua mensagem <span id="tipo-mensagem"></span></h3>
       <p id="mensagem-nova"></p>
       <button onclick="cipherPage">Quero inserir uma nova mensagem</button>
     </div>
