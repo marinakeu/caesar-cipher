@@ -25,7 +25,20 @@ function showDecodePage() {
 function encode() {
   cipherPage.className = cipherPage.className.replace('show' , 'hide');
   messagePage.className = messagePage.className.replace('hide' , 'show');
-  let messageToEncode = document.getElementById('mensagem-cifrar').nodeValue;
+  
+  let messageArray = [];
+  let messageLetterCode  = [];
+  let encodeOffSet = document.getElementById('deslocamento-decifrar').value;
+  let messageToEncode = document.getElementById('mensagem-cifrar').value;
+
+  for( i = 0; i < messageToEncode.length; i++) {
+  messageLetterCode[i] = (messageToEncode.charCodeAt(i) - 65 + encodeOffSet) % 26 + 65;
+    } 
+
+    let newMessage = messageLetterCode.join(' '); 
+
+    let printNewMessage = document.getElementById('mensagem-nova');
+   return printNewMessage.innerHTML = newMessage;
 
 }
 
