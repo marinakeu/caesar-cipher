@@ -28,14 +28,18 @@ function encode() {
   
   let messageArray = [];
   let messageLetterCode  = [];
-  let encodeOffSet = document.getElementById('deslocamento-decifrar').value;
+  let newLetters = [];
+  let encodeOffSet = document.getElementById('deslocamento-cifrar').value;
   let messageToEncode = document.getElementById('mensagem-cifrar').value;
 
   for( i = 0; i < messageToEncode.length; i++) {
-  messageLetterCode[i] = (messageToEncode.charCodeAt(i) - 65 + encodeOffSet) % 26 + 65;
+  messageLetterCode[i] = messageToEncode.charCodeAt(i);
+  let conta = ((messageLetterCode[i] - 65 + encodeOffSet)%26) + 65;
+  newLetters[i] = String.fromCharCode(conta);
+  console.log(newLetters);
     } 
 
-    let newMessage = messageLetterCode.join(' '); 
+    let newMessage = newLetters.join(' '); 
 
     let printNewMessage = document.getElementById('mensagem-nova');
    return printNewMessage.innerHTML = newMessage;
