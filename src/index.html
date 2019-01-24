@@ -10,33 +10,33 @@
       <h2>Cifra de César</h2>
     </header>
 
-    <div id="pagina-inicial">
+    <div id='pagina-inicial'>
       <h3>Olá!</h3>
       <p>Escolha uma opção:</p>
-      <button onclick="showCipherPage()">Quero escrever uma mensagem nova</button>
-      <button onclick="showDecodePage()">Quero decifrar uma mensagem</button>
+      <button onclick='showEncodePage()'>Quero escrever uma mensagem nova</button>
+      <button onclick='showDecodePage()'>Quero decifrar uma mensagem</button>
     </div>
 
-    <div id="pagina-cifrar">
+    <div id='pagina-cifrar'>
       <p>Digite a chave de deslocamento:</p>
-      <input id="deslocamento-cifrar" type="text">
+      <input id='deslocamento-cifrar' type='text'>
       <p>Digite a mensagem a ser cifrada</p>
-      <input id="mensagem-cifrar" type="text">
-      <input onclick="encode()" type="submit" value="Enviar">
+      <input id='mensagem-cifrar' type='text'>
+      <input onclick='encode()' type='submit' value='Enviar'>
     </div>
 
-    <div id="pagina-decifrar">
+    <div id='pagina-decifrar'>
       <p>Digite a chave de deslocamento:</p>
-      <input id="deslocamento-decifrar" type="text">
+      <input id='deslocamento-decifrar' type='text'>
       <p>Digite a mensagem a ser decifrada</p>
-      <input id="mensagem-decifrar" type="text"> 
-      <input onclick="decode()" type="submit" value="Enviar">
+      <input id='mensagem-decifrar' type='text'> 
+      <input onclick='decode()' type='submit' value='Enviar'>
     </div>
 
-    <div id="pagina-mensagem">
-      <h3>Confira sua mensagem <span id="tipo-mensagem"></span></h3>
-      <p id="mensagem-nova"></p>
-      <button onclick="cipherPage">Quero inserir uma nova mensagem</button>
+    <div id='pagina-mensagem'>
+      <h3>Confira a mensagem <span id='tipo-mensagem'></span></h3>
+      <p id='mensagem-nova'></p>
+      <button onclick='cipherPage'>Quero inserir uma nova mensagem</button>
     </div>
 
     <script src="cipher.js"></script>
