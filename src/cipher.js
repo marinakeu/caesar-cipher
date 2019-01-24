@@ -1,10 +1,3 @@
-window.cipher = {
-  // ... 
-  
-  
-};
-
-/* Algum problema não chama a função da Initial Page
 var initialPage = document.getElementById("pagina-inicial");
 var cipherPage = document.getElementById("pagina-cifrar");
 var decodePage = document.getElementById("pagina-decifrar");
@@ -23,7 +16,7 @@ function showDecodePage() {
   initialPage.className = "hide";
   decodePage.className = decodePage.className.replace("hide" , "show");
   }
-  */
+  
 
 
 
