@@ -29,13 +29,16 @@ function encode() {
   let messageArray = [];
   let messageLetterCode  = [];
   let newLetters = [];
-  let encodeOffSet = document.getElementById('deslocamento-cifrar').value;
+  let encodeOffSet = parseInt(document.getElementById('deslocamento-cifrar').value);
   let messageToEncode = document.getElementById('mensagem-cifrar').value;
+
 
   for( i = 0; i < messageToEncode.length; i++) {
   messageLetterCode[i] = messageToEncode.charCodeAt(i);
-  let conta = ((messageLetterCode[i] - 65 + encodeOffSet)%26) + 65;
-  newLetters[i] = String.fromCharCode(conta);
+  let includeOffset = ((messageLetterCode[i] - 65 + encodeOffSet)%26) + 65;
+  newLetters[i] = String.fromCharCode(includeOffset);
+  console.log(messageLetterCode);
+  console.log(includeOffset);
   console.log(newLetters);
     } 
 
