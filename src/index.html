@@ -23,6 +23,13 @@
       <p>Digite a mensagem a ser cifrada</p>
       <input id='mensagem-cifrar' type='text'>
       <input onclick='encode()' type='submit' value='Enviar'>
+      <p><button onclick='showInitialPage()'>Voltar ao início</button></p>
+    </div>
+
+    <div id='mensagem-cifrada'>
+      <h3>Confira a mensagem <span id='tipo-mensagem'></span></h3>
+      <p id='mensagem-nova-cifrada'></p>
+      <button onclick='showDecodePage()'>Quero decifrar uma mensagem</button>
     </div>
 
     <div id='pagina-decifrar'>
@@ -31,12 +38,13 @@
       <p>Digite a mensagem a ser decifrada</p>
       <input id='mensagem-decifrar' type='text'> 
       <input onclick='decode()' type='submit' value='Enviar'>
+      <p><button onclick='showInitialPage()'>Voltar ao início</button></div></p>
     </div>
 
-    <div id='pagina-mensagem'>
+    <div id='mensagem-decifrada'>
       <h3>Confira a mensagem <span id='tipo-mensagem'></span></h3>
-      <p id='mensagem-nova'></p>
-      <button onclick='showInitialPage()'>Quero inserir uma nova mensagem</button>
+      <p id='mensagem-nova-decifrada'></p>
+      <button onclick='showEncodePage()'>Quero escrever uma mensagem nova</button>
     </div>
 
     <script src="cipher.js"></script>

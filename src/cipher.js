@@ -1,25 +1,30 @@
 var initialPage = document.getElementById('pagina-inicial');
 var cipherPage = document.getElementById('pagina-cifrar');
 var decodePage = document.getElementById('pagina-decifrar');
-var messagePage = document.getElementById('pagina-mensagem');
+var cipherMessage = document.getElementById('mensagem-cifrada');
+var decodeMessage = document.getElementById('mensagem-decifrada');
 
 cipherPage.className = 'hide';
 decodePage.className = 'hide';
-messagePage.className = 'hide';
+cipherMessage.className = 'hide';
+decodeMessage.className = 'hide';
 
 function showEncodePage() {
   initialPage.className = 'hide';
+  decodeMessage.className = 'hide';
+  decodePage.className = decodePage.className.replace('show' , 'hide');
   cipherPage.className = cipherPage.className.replace('hide' , 'show');
 }
 
 function showDecodePage() {
   initialPage.className = 'hide';
+  cipherMessage.className = 'hide';
+  cipherPage.className = cipherPage.className.replace('show' , 'hide');
   decodePage.className = decodePage.className.replace('hide' , 'show');
   }
   
 function encode() {
-  cipherPage.className = cipherPage.className.replace('show' , 'hide');
-  messagePage.className = messagePage.className.replace('hide' , 'show');
+  cipherMessage.className = cipherMessage.className.replace('hide' , 'show');
   
   let messageLetterCode  = [];
   let encodeOffSet = parseInt(document.getElementById('deslocamento-cifrar').value);
@@ -63,14 +68,13 @@ console.log(messageToEncode);
 
     } 
 
-  let printNewMessage = document.getElementById('mensagem-nova');
+  let printNewMessage = document.getElementById('mensagem-nova-cifrada');
    return printNewMessage.innerHTML = newMessage;
 
 }
 
 function decode() {
-  decodePage.className = cipherPage.className.replace('show' , 'hide');
-  messagePage.className = messagePage.className.replace('hide' , 'show');
+  decodeMessage.className = decodeMessage.className.replace('hide' , 'show');
   
   let messageLetterCode  = [];
   let htmlDecodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
@@ -112,13 +116,16 @@ function decode() {
   
   } 
 
-    let printNewMessage = document.getElementById('mensagem-nova');
+    let printNewMessage = document.getElementById('mensagem-nova-decifrada');
    return printNewMessage.innerHTML = newMessage;
 
 }
 
 function showInitialPage() {
-  messagePage.className = messagePage.className.replace('show' , 'hide');
+  cipherPage.className = cipherPage.className.replace('show' , 'hide');
+  decodePage.className = decodePage.className.replace('show' , 'hide');
+  cipherMessage.className = cipherMessage.className.replace('show' , 'hide');
+  decodeMessage.className = decodeMessage.className.replace('show' , 'hide');
   initialPage.className = initialPage.className.replace('hide' , 'show  ');
 }
 
