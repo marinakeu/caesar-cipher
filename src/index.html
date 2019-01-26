@@ -20,33 +20,33 @@
     </div>
 
     <div id='pagina-cifrar'>
-      <p>Digite a chave de deslocamento:</p>
-      <input id='deslocamento-cifrar' type='text'>
-      <p>Digite a mensagem a ser cifrada</p>
-      <input id='mensagem-cifrar' type='text'>
-      <input onclick='encode()' type='submit' value='Enviar'>
-      <p><button onclick='showInitialPage()'>Voltar ao início</button></p>
+      <p>Digite a chave de deslocamento:
+      <input id='deslocamento-cifrar' type='text'></p>
+      <p>Digite a mensagem a ser cifrada
+      <input id='mensagem-cifrar' type='text'></p>
+      <p><button onclick='encode()'>CRIPTOGRAFAR</button></p>
+      <p><button id='inicio' onclick='showInitialPage()'>VOLTAR AO INÍCIO</button></p>
     </div>
 
     <div id='mensagem-cifrada'>
-      <h3>Confira a mensagem <span id='tipo-mensagem'></span></h3>
+      <h3>Confira a mensagem criptografada</h3>
       <p id='mensagem-nova-cifrada'></p>
-      <button onclick='showDecodePage()'>Quero decifrar uma mensagem</button>
+      <button onclick='showDecodePage()'>DECIFRAR MENSAGEM</button>
     </div>
 
     <div id='pagina-decifrar'>
-      <p>Digite a chave de deslocamento:</p>
-      <input id='deslocamento-decifrar' type='text'>
-      <p>Digite a mensagem a ser decifrada</p>
-      <input id='mensagem-decifrar' type='text'> 
-      <input onclick='decode()' type='submit' value='Enviar'>
-      <p><button onclick='showInitialPage()'>Voltar ao início</button></div></p>
+      <p>Digite a chave de deslocamento:
+      <input id='deslocamento-decifrar' type='text'></p>
+      <p>Digite a mensagem a ser decifrada
+      <input id='mensagem-decifrar' type='text'></p>
+      <p><button onclick='decode()'>DECIFRAR</button></p>
+      <p><button id='inicio' onclick='showInitialPage()'>VOLTAR AO INÍCIO</button></div></p>
     </div>
 
     <div id='mensagem-decifrada'>
-      <h3>Confira a mensagem <span id='tipo-mensagem'></span></h3>
+      <h3>Confira a mensagem decifrada</h3>
       <p id='mensagem-nova-decifrada'></p>
-      <button onclick='showEncodePage()'>Quero escrever uma mensagem nova</button>
+      <button onclick='showEncodePage()'>CRIAR MENSAGEM</button>
     </div>
 
     <script src="cipher.js"></script>

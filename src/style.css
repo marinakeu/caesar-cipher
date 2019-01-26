@@ -1,4 +1,4 @@
-*{font-family: 'Courier New', Courier, monospace, serif;
+*{font-family: 'Courier New', Courier, monospace;
 color: rgb(236, 237, 96);
 font-weight: bold;
 letter-spacing: 1px;
@@ -45,6 +45,16 @@ input{
 button {
   font-size: 90%;
    background: rgb(134, 6, 99);
+   padding: 8px;
+   font-weight: bold;
+   border: none;
+   text-align: center;
+ }
+
+ #inicio {
+   font-size: 90%;
+   text-decoration: underline;
+   background: none;
    padding: 8px;
    font-weight: bold;
    border: none;
