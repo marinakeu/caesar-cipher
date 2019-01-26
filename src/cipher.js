@@ -67,14 +67,14 @@ function decode() {
   messageLetterCode[i] = messageToEncode.charCodeAt(i);
 
   if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
-  let includeOffset = ((messageLetterCode[i] - 65 - encodeOffSet)%26) + 65;
+  let includeOffset = ((messageLetterCode[i] - 65 - ((encodeOffSet)%26) + 26)%26) + 65;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   console.log(messageLetterCode);
   console.log(includeOffset);
-  console.log(newLetters);
+  console.log(newMessage);
   }
   else if(messageLetterCode[i] >= 97 && messageLetterCode[i] <= 122) {
-  let includeOffset = ((messageLetterCode[i] - 97 - encodeOffSet)%26) + 97;
+  let includeOffset = ((messageLetterCode[i] - 97 - ((encodeOffSet)%26) + 26)%26) + 97;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   }
   else {
