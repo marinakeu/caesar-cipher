@@ -12,19 +12,19 @@ decodeMessage.className = 'hide';
 function showEncodePage() {
   initialPage.className = 'hide';
   decodeMessage.className = 'hide';
-  decodePage.className = decodePage.className.replace('show' , 'hide');
-  cipherPage.className = cipherPage.className.replace('hide' , 'show');
+  decodePage.className = 'hide';
+  cipherPage.className = 'show';
 }
 
 function showDecodePage() {
   initialPage.className = 'hide';
   cipherMessage.className = 'hide';
-  cipherPage.className = cipherPage.className.replace('show' , 'hide');
-  decodePage.className = decodePage.className.replace('hide' , 'show');
+  cipherPage.className = 'hide';
+  decodePage.className = 'show';
   }
   
 function encode() {
-  cipherMessage.className = cipherMessage.className.replace('hide' , 'show');
+  cipherMessage.className = 'show';
   
   let messageLetterCode  = [];
   let encodeOffSet = parseInt(document.getElementById('deslocamento-cifrar').value);
@@ -74,11 +74,11 @@ console.log(messageToEncode);
 }
 
 function decode() {
-  decodeMessage.className = decodeMessage.className.replace('hide' , 'show');
+  decodeMessage.className = 'show';
   
   let messageLetterCode  = [];
-  let htmlDecodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
-  let decodeOffSet = htmlDecodeOffSet * (-1);
+  let decodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
+  //let decodeOffSet = htmlDecodeOffSet * (-1);
   let messageToDecode = document.getElementById('mensagem-decifrar').value;
   messageToDecode = messageToDecode.replace(/[ÀÁÂÃÄÅ]/g,'A');
   messageToDecode = messageToDecode.replace(/[àáâãäå]/g,'a');
@@ -99,7 +99,7 @@ function decode() {
   console.log(decodeOffSet);
 
   if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
-  let includeOffset = (messageLetterCode[i] - 65 + (decodeOffSet%26) + 26)%26 + 65;
+  let includeOffset = (messageLetterCode[i] - 65 - (decodeOffSet%26) + 26)%26 + 65;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   console.log(messageLetterCode);
   console.log(decodeOffSet);
@@ -122,10 +122,10 @@ function decode() {
 }
 
 function showInitialPage() {
-  cipherPage.className = cipherPage.className.replace('show' , 'hide');
-  decodePage.className = decodePage.className.replace('show' , 'hide');
-  cipherMessage.className = cipherMessage.className.replace('show' , 'hide');
-  decodeMessage.className = decodeMessage.className.replace('show' , 'hide');
-  initialPage.className = initialPage.className.replace('hide' , 'show  ');
+  cipherPage.className = 'hide';
+  decodePage.className = 'hide';
+  cipherMessage.className = 'hide';
+  decodeMessage.className = 'hide';
+  initialPage.className = 'show';
 }
 
