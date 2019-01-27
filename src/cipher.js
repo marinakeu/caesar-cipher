@@ -31,7 +31,7 @@ function encode() {
 
   let messageToEncode = document.getElementById('mensagem-cifrar').value;
   console.log(messageToEncode);
-  messageToEncode = messageToEncode.replace(/[ÀÁÂÃÄÅ]/g,'A');
+ /* messageToEncode = messageToEncode.replace(/[ÀÁÂÃÄÅ]/g,'A');
   messageToEncode = messageToEncode.replace(/[àáâãäå]/g,'a');
   messageToEncode = messageToEncode.replace(/[ÈÉÊË]/g,'E');
   messageToEncode = messageToEncode.replace(/[éèêë]/g,'e');
@@ -42,29 +42,29 @@ function encode() {
   messageToEncode = messageToEncode.replace(/[ÚÙÛÜ]/g,'U');
   messageToEncode = messageToEncode.replace(/[úùûü]/g,'u');
   messageToEncode = messageToEncode.replace(/[Ç]/g,'C');
-  messageToEncode = messageToEncode.replace(/[ç]/g,'c');
+  messageToEncode = messageToEncode.replace(/[ç]/g,'c');*/
 
   let newMessage = '';
-console.log(messageToEncode);
+//console.log(messageToEncode);
 
   for( i = 0; i < messageToEncode.length; i++) {
   messageLetterCode[i] = messageToEncode.charCodeAt(i);
 
-  if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
-  let includeOffset = (messageLetterCode[i] - 65 + encodeOffSet%26 + 26)%26 + 65;
+  //if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
+  let includeOffset = (messageLetterCode[i] - 32 + encodeOffSet%223 + 223)%223 + 32;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   console.log(messageLetterCode);
   console.log(encodeOffSet);
   console.log(includeOffset);
   console.log(newMessage);
-  } 
+  /*} 
   else if(messageLetterCode[i] >= 97 && messageLetterCode[i] <= 122) {
   let includeOffset = (messageLetterCode[i] - 97 + encodeOffSet%26 + 26)%26 + 97;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   }
   else {
   newMessage = newMessage + String.fromCharCode(messageLetterCode[i]);
-  }
+  }*/
 
     } 
 
@@ -78,9 +78,8 @@ function decode() {
   
   let messageLetterCode  = [];
   let decodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
-  //let decodeOffSet = htmlDecodeOffSet * (-1);
   let messageToDecode = document.getElementById('mensagem-decifrar').value;
-  messageToDecode = messageToDecode.replace(/[ÀÁÂÃÄÅ]/g,'A');
+  /*messageToDecode = messageToDecode.replace(/[ÀÁÂÃÄÅ]/g,'A');
   messageToDecode = messageToDecode.replace(/[àáâãäå]/g,'a');
   messageToDecode = messageToDecode.replace(/[ÈÉÊË]/g,'E');
   messageToDecode = messageToDecode.replace(/[éèêë]/g,'e');
@@ -91,28 +90,29 @@ function decode() {
   messageToDecode = messageToDecode.replace(/[ÚÙÛÜ]/g,'U');
   messageToDecode = messageToDecode.replace(/[úùûü]/g,'u');
   messageToDecode = messageToDecode.replace(/[Ç]/g,'C');
-  messageToDecode = messageToDecode.replace(/[ç]/g,'c');
+  messageToDecode = messageToDecode.replace(/[ç]/g,'c');*/
+
   let newMessage = '';
 
   for( i = 0; i < messageToDecode.length; i++) {
   messageLetterCode[i] = messageToDecode.charCodeAt(i);
   console.log(decodeOffSet);
 
-  if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
-  let includeOffset = (messageLetterCode[i] - 65 - (decodeOffSet%26) + 26)%26 + 65;
+  //if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
+  let includeOffset = (messageLetterCode[i] - 32 - (decodeOffSet%223) + 223)%223 + 32;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   console.log(messageLetterCode);
   console.log(decodeOffSet);
   console.log(includeOffset);
   console.log(newMessage);
-  }
+  /*}
   else if(messageLetterCode[i] >= 97 && messageLetterCode[i] <= 122) {
   let includeOffset = (messageLetterCode[i] - 97 + (decodeOffSet%26) + 26)%26 + 97;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   }
   else {
   newMessage = newMessage + String.fromCharCode(messageLetterCode[i]);
-  }
+  }*/
   
   } 
 
