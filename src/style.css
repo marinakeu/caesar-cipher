@@ -10,35 +10,35 @@ letter-spacing: 1px;
  .show{
     display:block;
  }
-
- header{
-   text-align: center;
-   margin: auto;
-   margin-top: 150px;
-   padding: 1px 20px;
+ .display{
+   display: inline-block;
    background-color: rgb(1, 112, 153, 0.6);
-   width: 40%;
-   }
+   padding: 10px 20px;
+  width: 40%;
+  height: 60%;
+  margin: auto;
+ }
+
 
 body{
    background-image: url(Imagens/envelope-colorido.jpg);
    background-color: rgb(0, 146, 219);
-   height: 350px;
-   background-position: center;
+   height: 100%;
+  /* background-position: center;*/
    background-repeat: no-repeat;
    background-size: cover;
    text-align: center;
 }
 
-div {
+#pagina-inicial {
    background-color: rgb(1, 112, 153, 0.6);
    padding: 10px 20px;
-   width: 40%;
+  width: 40%;
   height: 60%;
   margin: auto;
-}
+    }
 
-input{
+input, textarea{
    color: darkslategray;
 }
 
@@ -60,3 +60,5 @@ button {
    border: none;
    text-align: center;
  }
+
+

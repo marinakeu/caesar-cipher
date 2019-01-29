@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h2>Mensagens Criptografadas</h2>
-          </header>
 
-    <div id='pagina-inicial'>
-      <h3>Olá! Aqui você pode criar<br />
-        e criptografar sua mensagem antes de enviar<br />
-        ou decifrar uma mensagem criptografada<br /></h3>
-      <h3>Escolha uma opção:</h3>    
-      <button onclick='showEncodePage()'>CRIAR MENSAGEM</button>
-      <button onclick='showDecodePage()'>DECIFRAR MENSAGEM</button>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title>Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <div id='pagina-cifrar'>
-      <p>Digite a chave de deslocamento:
-      <input id='deslocamento-cifrar' type='text'></p>
-      <p>Digite a mensagem a ser cifrada
-      <input id='mensagem-cifrar' type='text'></p>
-      <p><button onclick='saveEncode()'>CRIPTOGRAFAR</button></p>
-      <p><button id='inicio' onclick='showInitialPage()'>VOLTAR AO INÍCIO</button></p>
-    </div>
+<body>
+  <header>
+    <h2>Cipher</h2>
+    <h6>mensagens criptografadas</h6>
+  </header>
 
-    <div id='mensagem-cifrada'>
-      <h3>Confira a mensagem criptografada</h3>
-      <p id='mensagem-nova-cifrada'></p>
-    </div>
+  <div id='pagina-inicial'>
+    <h3>Olá! Aqui você pode criar<br />
+      e criptografar sua mensagem antes de enviar<br />
+      ou decifrar uma mensagem criptografada<br /></h3>
+    <button onclick='showCipherPage()'>COMEÇAR</button>
+  </div>
 
-    <div id='pagina-decifrar'>
-      <p>Digite a chave de deslocamento:
-      <input id='deslocamento-decifrar' type='text'></p>
-      <p>Digite a mensagem a ser decifrada
-      <input id='mensagem-decifrar' type='text'></p>
-      <p><button onclick='saveDecode()'>DECIFRAR</button></p>
-      <p><button id='inicio' onclick='showInitialPage()'>VOLTAR AO INÍCIO</button></div></p>
-    </div>
+  <div id='cifrar'>
+    <p>Digite a chave de deslocamento:
+      <input id='deslocamento' type='text'></p>
+    <p>Digite a mensagem a ser cifrada:</p>
+    <textarea id='mensagem' rows='4' cols='50' placeholder='Escreva sua mensagem aqui'></textarea>
+    <p><button onclick='saveEncode()'>CRIPTOGRAFAR</button>
+      <button onclick='saveDecode()'>DECIFRAR</button></p>
 
-    <div id='mensagem-decifrada'>
-      <h3>Confira a mensagem decifrada</h3>
-      <p id='mensagem-nova-decifrada'></p>
-    </div>
+  </div>
 
-    <script src="cipher.js"></script>
-    <script src="tests.js"></script>
-  </body>
+  <div id='mensagem-cifrada'>
+    <h3>Confira o resultado:</h3>
+    <textarea id='mensagem-nova' rows='4' cols='50' placeholder=''></textarea>
+    <p><button id='inicio' onclick='showInitialPage()'>VOLTAR PARA A PÁGINA INICIAL</button></p>
+  </div>
+
+  <script src="cipher.js"></script>
+  <script src="tests.js"></script>
+</body>
+
 </html>
