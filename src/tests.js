@@ -1,0 +1,3 @@
+function checkCipher(calculado, esperao){
+    
+}

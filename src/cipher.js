@@ -62,13 +62,19 @@ function encode(messageToEncode, encodeOffset) {
 
 }
 
-function decode() {
+function saveDecode(){
+  const decodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
+  const messageToDecode = document.getElementById('mensagem-decifrar').value;
+  let decipher = decode(messageToDecode, decodeOffSet);
+
+  let printNewMessage = document.getElementById('mensagem-nova-decifrada');
+  printNewMessage.innerHTML = decipher;
+}
+
+function decode(messageToDecode, decodeOffSet) {
   decodeMessage.className = 'show';
   
   let messageLetterCode  = [];
-  let decodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
-  let messageToDecode = document.getElementById('mensagem-decifrar').value;
-  
   let newMessage = '';
 
   for( i = 0; i < messageToDecode.length; i++) {
@@ -92,8 +98,8 @@ function decode() {
     }
   } 
 console.log(newMessage);
-    let printNewMessage = document.getElementById('mensagem-nova-decifrada');
-   return printNewMessage.innerHTML = newMessage;
+    
+return newMessage;
 
 }
 
