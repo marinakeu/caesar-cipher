@@ -24,6 +24,7 @@ function showDecodePage() {
   }
 
 function saveEncode() {
+  cipherMessage.className = 'show';
  const encodeOffset = parseInt(document.getElementById('deslocamento-cifrar').value);
   const messageToEncode = document.getElementById('mensagem-cifrar').value;
   let cipher = encode(messageToEncode, encodeOffset);
@@ -33,10 +34,8 @@ function saveEncode() {
 }
   
 function encode(messageToEncode, encodeOffset) {
-  cipherMessage.className = 'show';
-  
   let messageLetterCode  = [];
-   let newMessage = '';
+  let newMessage = '';
 
   for( i = 0; i < messageToEncode.length; i++) {
   messageLetterCode[i] = messageToEncode.charCodeAt(i);
@@ -63,6 +62,7 @@ function encode(messageToEncode, encodeOffset) {
 }
 
 function saveDecode(){
+  decodeMessage.className = 'show';
   const decodeOffSet = parseInt(document.getElementById('deslocamento-decifrar').value);
   const messageToDecode = document.getElementById('mensagem-decifrar').value;
   let decipher = decode(messageToDecode, decodeOffSet);
@@ -72,8 +72,6 @@ function saveDecode(){
 }
 
 function decode(messageToDecode, decodeOffSet) {
-  decodeMessage.className = 'show';
-  
   let messageLetterCode  = [];
   let newMessage = '';
 
