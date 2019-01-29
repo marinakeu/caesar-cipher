@@ -22,32 +22,35 @@ function showDecodePage() {
   cipherPage.className = 'hide';
   decodePage.className = 'show';
   }
+
+function saveEncode() {
+ const encodeOffset = parseInt(document.getElementById('deslocamento-cifrar').value);
+  const messageToEncode = document.getElementById('mensagem-cifrar').value;
+  let cipher = encode(messageToEncode, encodeOffset);
   
-function encode() {
+  let printNewMessage = document.getElementById('mensagem-nova-cifrada');
+  printNewMessage.innerHTML = cipher;
+}
+  
+function encode(messageToEncode, encodeOffset) {
   cipherMessage.className = 'show';
   
   let messageLetterCode  = [];
-  let encodeOffSet = parseInt(document.getElementById('deslocamento-cifrar').value);
-
-  let messageToEncode = document.getElementById('mensagem-cifrar').value;
-  console.log(messageToEncode);
-
-  let newMessage = '';
+   let newMessage = '';
 
   for( i = 0; i < messageToEncode.length; i++) {
   messageLetterCode[i] = messageToEncode.charCodeAt(i);
 
   if(messageLetterCode[i] >= 65 && messageLetterCode[i]<= 90) {
-  let includeOffset = (messageLetterCode[i] - 65 + encodeOffSet%26 + 26)%26 + 65;
-  //let includeOffset = (messageLetterCode[i] - 32 + encodeOffSet%223 + 223)%223 + 32;
+  let includeOffset = (messageLetterCode[i] - 65 + encodeOffset%26 + 26)%26 + 65;
   newMessage = newMessage + String.fromCharCode(includeOffset);
   console.log(messageLetterCode);
-  console.log(encodeOffSet);
+  console.log(encodeOffset);
   console.log(includeOffset);
   console.log(newMessage);
   } 
   else if(messageLetterCode[i] >= 97 && messageLetterCode[i] <= 122) {
-    let includeOffset = (messageLetterCode[i] - 97 + encodeOffSet%26 + 26)%26 + 97;
+    let includeOffset = (messageLetterCode[i] - 97 + encodeOffset%26 + 26)%26 + 97;
     newMessage = newMessage + String.fromCharCode(includeOffset);
   }
   else {
@@ -55,8 +58,7 @@ function encode() {
   }
 
   }
-  let printNewMessage = document.getElementById('mensagem-nova-cifrada');
-   return printNewMessage.innerHTML = newMessage;
+  return newMessage;
 
 }
 
