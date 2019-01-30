@@ -9,32 +9,37 @@
 
 <body>
   <header>
-    <h2>Cipher</h2>
-    <h6>mensagens criptografadas</h6>
+    <img src='Imagens/Imagem1 - CIPHER.png' width="15%" height="15%">
   </header>
 
   <div id='pagina-inicial'>
-    <h3>Olá! Aqui você pode criar<br />
-      e criptografar sua mensagem antes de enviar<br />
-      ou decifrar uma mensagem criptografada<br /></h3>
+    <p>Com CIPHER você pode criar e decifrar
+      mensagens a partir da <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Cifra de César.</a></p>
+    <p>Essa forma de criptografia é uma das conhecidas técnicas,
+      tendo sido utilizada pelo Imperador Julio César para evitar que
+      os inimigos do Império Romano tivessem acesso às suas estratégias.</p>
+    <p>Para criptografar sua mensagem, basta indicar em quantas posições você quer
+      que o alfabeto seja deslocado e indicar o texto.</p>
+      <p>Se você recebeu uma mensagem e precisa decifrá-la
+    insira o texto e a chave de deslocamento indicada por quem te enviou e pronto!</p>
     <button onclick='showCipherPage()'>COMEÇAR</button>
   </div>
-
+<div id='pagina-cipher'>
   <div id='cifrar'>
     <p>Digite a chave de deslocamento:
       <input id='deslocamento' type='text'></p>
     <p>Digite a mensagem a ser cifrada:</p>
-    <textarea id='mensagem' rows='4' cols='50' placeholder='Escreva sua mensagem aqui'></textarea>
+    <textarea id='mensagem' rows='5' cols='50' placeholder='Escreva sua mensagem aqui'></textarea>
     <p><button onclick='saveEncode()'>CRIPTOGRAFAR</button>
       <button onclick='saveDecode()'>DECIFRAR</button></p>
-
   </div>
 
   <div id='mensagem-cifrada'>
-    <h3>Confira o resultado:</h3>
-    <textarea id='mensagem-nova' rows='4' cols='50' placeholder=''></textarea>
+    <p>Confira o resultado:</p>
+    <textarea id='mensagem-nova' rows='7' cols='50' placeholder=''></textarea>
     <p><button id='inicio' onclick='showInitialPage()'>VOLTAR PARA A PÁGINA INICIAL</button></p>
   </div>
+</div>
 
   <script src="cipher.js"></script>
   <script src="tests.js"></script>

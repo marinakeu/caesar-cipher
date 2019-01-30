@@ -1,6 +1,6 @@
-*{font-family: 'Courier New', Courier, monospace;
+*{font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
+   font-weight: bold;
 color: rgb(236, 237, 96);
-font-weight: bold;
 letter-spacing: 1px;
 }
 
@@ -10,15 +10,28 @@ letter-spacing: 1px;
  .show{
     display:block;
  }
+
  .display{
-   display: inline-block;
+   position: relative;
+   float: left;
    background-color: rgb(1, 112, 153, 0.6);
-   padding: 10px 20px;
-  width: 40%;
-  height: 60%;
-  margin: auto;
+   border: 200px;
+   padding: 20px;
+   width: 40%;
+   height: 250px;
+   text-align: center;
+   margin-left: 60px;
  }
 
+ #pagina-cipher {
+padding-top: 50px;
+padding-bottom: none;
+ }
+
+ header{
+    padding-top: 20px;
+    padding-bottom: 30px;
+ }
 
 body{
    background-image: url(Imagens/envelope-colorido.jpg);
@@ -33,9 +46,9 @@ body{
 #pagina-inicial {
    background-color: rgb(1, 112, 153, 0.6);
    padding: 10px 20px;
-  width: 40%;
-  height: 60%;
-  margin: auto;
+   width: 40%;
+   height: 60%;
+   margin: auto;
     }
 
 input, textarea{
@@ -43,7 +56,7 @@ input, textarea{
 }
 
 button {
-  font-size: 90%;
+   font-size: 90%;
    background: rgb(134, 6, 99);
    padding: 8px;
    font-weight: bold;
