@@ -1,58 +1,36 @@
 # Cifra de César
 
 ## Introdução
-Briefing: O aniversário da sua mãe está se aproximando e você está organizando uma festa
-surpresa. Para manter a festa em segredo foi criado um grupo de Whatsapp com
-amigxs e familiares. O problema é que as vezes sua mãe utiliza o seu celular
-e pode ser que ela veja as suas mensagens. Como a festa é surpresa, você
-decide criar uma aplicação que permita enviar mensagens criptografadas e depois
-descriptografar. Então agora é a hora de aplicar os seus super poderes 😎
 
+O projeto "Cipher: mensagens secretas" foi desenvolvido a partir da situação-problema informada no briefing: o aniversário da sua mãe está se aproximando e para organizar uma  festa surpresa com amigues e familiares você precisa de uma aplicação que permita enviar mensagens criptografadas e depois descriptografar.
+
+Utilizando, portanto, conceitos de UX para interface e de programação em JavaScript para escrever a lógica que cifra e descifra, foi desenhada uma aplicação simples, fácil e funcional para atender a demanda pontual dos usuários mencionados.
 
 ## Objetivos
 
-usando os seus
-conhecimentos de **User Experience Design** e de **JavaScript**. Isso
-inclui desenhar um produto pensando nos usuários, construir uma interface,
-
-escrever a lógica que cifra e descifra
-
-mensagens, realizar testes básicos que comprovem (e documentem) esta lógica,
-e finalmente manipular o DOM para que ele mostre e imprima os resultados.
-
-no usuário, entendendo quem ele
-é e suas necessidades. A
+1. Criar uma aplicação que pode ser facilmente utilizada pelo público alvo;
+2. Permitir que o usuário digite um texto com letras maiúsculas e minúsculas, além de caracteres especiais para ser cifrado ou decifrado;
+3. Permitir que o usuário escolha o deslocamento para cifrar ou decifrar, inclusive deslocamentos negativos;
+4. Garantir que a aplicação possa ser testada de forma rápida com testes automatizados.
 
 ### Definição do produto
 
-Fluxograma:
-![Diagrama de blocos](https://uploaddeimagens.com.br/images/001/868/413/original/Cipher-Diagrama-de-blocos.png)
+*Diagrama de blocos
+Uma vez compreendidos o briefing e os requisitos básicos, foi possível desenvolver a lógica de funcionamento:
 
-Código
+![Diagrama de blocos](https://uploaddeimagens.com.br/images/001/868/902/original/cipher-diagrama.png)
 
-Considerações
+
+* HTML
+O HTML foi estruturado de forma a permitir 
+
+* CSS
+
+* JavaScript
+
+* Considerações
+
 
 ## Resultados
-Metade do tempo
-## Checklist
+Os objetivos do projeto foram alcançados. Todas as funcionalidades do requisito básico e as da Hacker Edition foram desenvolvidas na metade do prazo disponível (1 semana de 2 disponíveis), além de uma prévia consistente da interface. O tempo restante (segunda semana) permitiu realizar os ajustes finos de interface e melhorar o fluxo de interação.
 
-### Parte Obrigatória
-
-* [ ] `README.md` com explicações e desenho do projeto
-* [ ] Usar VanillaJS.
-* [ ] Permitir escrever um texto, com letras maiúsculas e minúsculas, para ser
-  cifrado.
-* [ ] Mostrar o resultado da cifra corretamente.
-* [ ] Permitir escrever um texto, com letras maiúsculas e minúsculas, para ser
-  descifrado.
-* [ ] Mostrar o resultado descifrado corretamente.
-* [ ] Permitir escolher o `offset` (_deslocamento_) a ser usado na
-  cifragem/descifragem.
-* [ ] Implementa `cipher.encode`.
-* [ ] Implementa `cipher.decode`.
-* [ ] Criar testes unitários.
-
-### Parte Opcional: "Hacker edition"
-
-* [ ] Permite usar um `offset` (_deslocamento_) negativo
-* [ ] Cifra/descifra _outros_ caracteres (espaços, pontuação, `ã`, `á`, ...)
