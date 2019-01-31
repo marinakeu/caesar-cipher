@@ -26,7 +26,7 @@ no usuário, entendendo quem ele
 ### Definição do produto
 
 Fluxograma:
-![Diagrama de blocos](Imagens/Cipher - Diagrama de blocos.png)
+![Diagrama de blocos](https://uploaddeimagens.com.br/imagens/cipher_-_diagrama_de_blocos-png)
 
 Código
 
