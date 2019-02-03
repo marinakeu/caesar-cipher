@@ -30,10 +30,6 @@ function encode(messageToEncode, encodeOffset) {
     if (messageLetterCode[i] >= 65 && messageLetterCode[i] <= 90) {
       let includeOffset = (messageLetterCode[i] - 65 + encodeOffset % 26 + 26) % 26 + 65;
       newMessage = newMessage + String.fromCharCode(includeOffset);
-      console.log(messageLetterCode);
-      console.log(encodeOffset);
-      console.log(includeOffset);
-      console.log(newMessage);
     }
     else if (messageLetterCode[i] >= 97 && messageLetterCode[i] <= 122) {
       let includeOffset = (messageLetterCode[i] - 97 + encodeOffset % 26 + 26) % 26 + 97;
@@ -63,15 +59,10 @@ function decode(messageToDecode, decodeOffSet) {
 
   for (i = 0; i < messageToDecode.length; i++) {
     messageLetterCode[i] = messageToDecode.charCodeAt(i);
-    console.log(decodeOffSet);
-
+    
     if (messageLetterCode[i] >= 65 && messageLetterCode[i] <= 90) {
       let includeOffset = (messageLetterCode[i] - 65 - decodeOffSet % 26 + 26) % 26 + 65;
       newMessage = newMessage + String.fromCharCode(includeOffset);
-      console.log(messageLetterCode);
-      console.log(decodeOffSet);
-      console.log(includeOffset);
-      console.log(newMessage);
     }
     else if (messageLetterCode[i] >= 97 && messageLetterCode[i] <= 122) {
       let includeOffset = (messageLetterCode[i] - 97 - decodeOffSet % 26 + 26) % 26 + 97;
@@ -81,8 +72,7 @@ function decode(messageToDecode, decodeOffSet) {
       newMessage = newMessage + String.fromCharCode(messageLetterCode[i]);
     }
   }
-  console.log(newMessage);
-
+  
   return newMessage;
 
 }

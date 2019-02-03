@@ -13,18 +13,22 @@ Utilizando, portanto, conceitos de UX para interface e de programação em JavaS
 3. Permitir que o usuário escolha o deslocamento para cifrar ou decifrar, inclusive deslocamentos negativos;
 4. Garantir que a aplicação possa ser testada de forma rápida com testes automatizados.
 
-### Definição do produto
+## Definição do produto
 
-*Diagrama de blocos
+* Diagrama de blocos
+
 Uma vez compreendidos o briefing e os requisitos básicos, foi possível desenvolver a lógica de funcionamento:
 
 ![Diagrama de blocos](https://uploaddeimagens.com.br/images/001/868/902/original/cipher-diagrama.png)
 
 
 * HTML
-O HTML foi estruturado de forma a permitir 
+
+O HTML foi estruturado em três divs principais (página inicial, bloco para o usuário inputar as informações e bloco onde a mensagem cifrada/decifrada é exibida). Foram usadas as tagas "input" (do tipo  number), "textarea" e button para inserir as infromações e para chamar as funções do JavaScript.
 
 * CSS
+
+
 
 * JavaScript
 
@@ -32,5 +36,5 @@ O HTML foi estruturado de forma a permitir
 
 
 ## Resultados
-Os objetivos do projeto foram alcançados. Todas as funcionalidades do requisito básico e as da Hacker Edition foram desenvolvidas na metade do prazo disponível (1 semana de 2 disponíveis), além de uma prévia consistente da interface. O tempo restante (segunda semana) permitiu realizar os ajustes finos de interface e melhorar o fluxo de interação.
+Os objetivos do projeto foram alcançados. Todas as funcionalidades do requisito básico e as da Hacker Edition foram desenvolvidas na metade do prazo disponível (1 semana de 2 disponíveis), além de uma prévia consistente da interface. O tempo restante (segunda semana) permitiu realizar os ajustes na interface e melhorar o fluxo de interação.
 
