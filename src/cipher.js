@@ -41,7 +41,6 @@ function encode(messageToEncode, encodeOffset) {
 
   }
   return newMessage;
-
 }
 
 function saveDecode() {
@@ -59,7 +58,7 @@ function decode(messageToDecode, decodeOffSet) {
 
   for (i = 0; i < messageToDecode.length; i++) {
     messageLetterCode[i] = messageToDecode.charCodeAt(i);
-    
+
     if (messageLetterCode[i] >= 65 && messageLetterCode[i] <= 90) {
       let includeOffset = (messageLetterCode[i] - 65 - decodeOffSet % 26 + 26) % 26 + 65;
       newMessage = newMessage + String.fromCharCode(includeOffset);
@@ -72,9 +71,7 @@ function decode(messageToDecode, decodeOffSet) {
       newMessage = newMessage + String.fromCharCode(messageLetterCode[i]);
     }
   }
-  
   return newMessage;
-
 }
 
 function showInitialPage() {
