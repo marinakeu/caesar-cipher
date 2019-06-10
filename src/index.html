@@ -9,12 +9,12 @@
 
 <body>
   <header>
-    <img src='Imagens/Imagem1 - CIPHER.png' width="15%" height="15%">
+    <img src="Imagens/Imagem1 - CIPHER.png" width="15%" height="15%">
   </header>
 
-  <div id='pagina-inicial'>
+  <div id="pagina-inicial">
     <p>Com CIPHER você pode criar e decifrar
-      mensagens </br>a partir da 
+      mensagens </br>a partir da
       <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">
         Cifra de César.</a></p>
     <p>Essa forma de criptografia é uma das técnicas mais conhecidas,</br>
@@ -22,27 +22,27 @@
       os inimigos do Império Romano tivessem acesso às suas estratégias.</p>
     <p>Para criptografar sua mensagem, basta indicar em quantas posições</br> você quer
       que o alfabeto seja deslocado e digitar o texto.</p>
-      <p>Se você recebeu uma mensagem e precisa decifrá-la, insira o texto</br>
-        e a chave de deslocamento indicada por quem te enviou e pronto!</p>
-    <button class='button' onclick='showCipherPage()'>COMEÇAR</button>
-  </div>
-  
-<div id='pagina-cipher'>
-  <div id='cifrar'>
-    <p>Digite o número da chave de deslocamento:
-      <input id='deslocamento' type='number'min="-100" max="100"></p>
-    <p>Digite a mensagem:</p>
-    <textarea id='mensagem' rows='5' cols='60' placeholder='Escreva sua mensagem aqui'></textarea>
-    <p><button class='button' onclick='saveEncode()'>CRIPTOGRAFAR</button>
-      <button class='button' onclick='saveDecode()'>DECIFRAR</button></p>
+    <p>Se você recebeu uma mensagem e precisa decifrá-la, insira o texto</br>
+      e a chave de deslocamento indicada por quem te enviou e pronto!</p>
+    <button class="button" onclick="showCipherPage()">COMEÇAR</button>
   </div>
 
-  <div id='mensagem-cifrada'>
-    <p>Confira o resultado:</p>
-    <textarea id='mensagem-nova' rows='7' cols='60' placeholder=''></textarea>
-    <p><button id='inicio' onclick='showInitialPage()'>VOLTAR PARA A PÁGINA INICIAL</button></p>
+  <div id="pagina-cipher">
+    <div id="cifrar">
+      <p>Digite o número da chave de deslocamento:
+        <input id="deslocamento" type="number" min="-100" max="100"></p>
+      <p>Digite a mensagem:</p>
+      <textarea id="mensagem" rows="5" cols="60" placeholder="Escreva sua mensagem aqui"></textarea>
+      <p><button class="button" onclick="saveEncode()">CRIPTOGRAFAR</button>
+        <button class="button" onclick="saveDecode()">DECIFRAR</button></p>
+    </div>
+
+    <div id="mensagem-cifrada">
+      <p>Confira o resultado:</p>
+      <textarea id="mensagem-nova" rows="7" cols="60" placeholder=""></textarea>
+      <p><button id="inicio" onclick="showInitialPage()">VOLTAR PARA A PÁGINA INICIAL</button></p>
+    </div>
   </div>
-</div>
 
   <script src="cipher.js"></script>
   <script src="tests.js"></script>
